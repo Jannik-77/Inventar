@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#174a35"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg"><title>Fahrzeug-Inventar</title><link rel="stylesheet" href="style.css"></head>
+<body><header><h1>🚐 Fahrzeug-Inventar</h1><span id="status">Offline bereit</span></header>
+<main>
+<section class="panel"><h2>Regal auswählen</h2><div class="row"><button class="shelf active" data-shelf="Links">Links</button><button class="shelf" data-shelf="Rechts">Rechts</button></div>
+<h3>Abschnitt</h3><div id="sections" class="grid"></div><h3>Schublade</h3><div id="drawers" class="grid"></div><h3>Fach / Kiste</h3><div id="compartments" class="grid"></div>
+<p id="placeLabel"></p><button id="addDrawer" class="secondary">＋ Schublade hinzufügen</button> <button id="addCompartment" class="secondary">＋ Fach hinzufügen</button></section>
+<section class="panel"><h2>Artikel im ausgewählten Fach</h2><input id="search" placeholder="🔎 Artikel oder Lagerort suchen"><form id="itemForm"><input id="name" required placeholder="Artikelname"><div class="row"><label>Bestand <input id="qty" type="number" min="0" value="1" required></label><label>Warnung ab <input id="minimum" type="number" min="0" value="0" required></label></div><button id="save">＋ Artikel im Fach speichern</button></form><p id="msg"></p><div id="items"></div></section>
+<section class="panel"><h2>Datensicherung</h2><div class="row"><button id="export">JSON exportieren</button><label class="file">JSON importieren<input id="import" type="file" accept=".json,application/json"></label></div><p class="small">Daten werden lokal in diesem Browser gespeichert. Exportiere regelmäßig eine Sicherung.</p></section>
+</main><footer>Fahrzeug-Inventar · Version 4.0 · offlinefähig</footer><script src="app.js"></script></body></html>
